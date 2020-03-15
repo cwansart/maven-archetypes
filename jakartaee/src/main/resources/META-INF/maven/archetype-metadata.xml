@@ -1,0 +1,34 @@
+<archetype-descriptor
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="jakartaee">
+    <requiredProperties>
+        <requiredProperty key="package">
+            <defaultValue>${groupId}.${artifactId.replaceAll("-", "_")}</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="jakartaeeApiVersion">
+            <defaultValue>8.0.0</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="junitVersion">
+            <defaultValue>5.6.0</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="surefirePluginVersion">
+            <defaultValue>3.0.0-M4</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="openLibertyVersion">
+            <defaultValue>20.0.0.3</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+
+    <fileSets>
+        <fileSet filtered="true" packaged="true">
+            <directory>src/main/java</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="true">
+            <directory>src/test/java</directory>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>src/main/liberty</directory>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>
