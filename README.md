@@ -8,6 +8,7 @@ This should be obvious but in case you don't know, this project requires:
 
 * JDK 8 or newer
 * Maven 3.1 or newer
+* Docker 19 or newer
 
 ## Install
 
