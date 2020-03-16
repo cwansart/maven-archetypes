@@ -33,10 +33,15 @@ There are several property that may be set via `-D<property>=<value>`:
 | Property              | Description                  | Default value             |
 | --------------------- | -----------------------------| -------------------------:|
 | package               | the package name             | \${groupId}.${artifactId} |
-| jakartaeeApiVersion   | Jakarta EE api version       |                     8.0.0 |
-| junitVersion          | JUnit 5 version              |                     5.6.0 |
-| surefirePluginVersion | Surefire plugin version      |                  3.0.0-M4 |
 | openLibertyVersion    | Open Liberty runtime version |                  20.0.0.3 |
+| jakartaeeApiVersion   | Jakarta EE api version       |                     8.0.0 |
+| slf4jVersion          | Slf4j version                |                    1.7.30 |
+| junitVersion          | JUnit 4 version              |                      4.13 |
+| testcontainersVersion | Testcontainers version       |                    1.13.0 |
+| restAssuredVersion    | Rest Assured version         |                     4.3.0 |
+| surefirePluginVersion | Surefire plugin version      |                  3.0.0-M4 |
+| failsafePluginVersion | Failsafe plugin version      |                  3.0.0-M4 |
+
 
 To create a project based on the archetype:
 
