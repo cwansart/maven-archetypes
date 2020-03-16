@@ -57,3 +57,28 @@ After creating you can run tests and run the application via Maven:
 $ mvn clean verify
 $ mvn liberty:run
 ```
+
+## Shotcut for creation (bash/sh)
+
+Instead of using the long and hard to remember generate command you can add a
+function to your .bash_profile:
+
+```bash
+gen-jakarta () {
+  mvn archetype:generate -DarchetypeCatalog=local \
+                         -DarchetypeGroupId=de.cwansart.archetypes \
+                         -DarchetypeArtifactId=jakartaee $@
+}
+```
+
+After adding and reloading the terminal session you can run the command via:
+
+```bash
+$ gen-jakarta
+```
+
+You can also pass additional parameters like the ones listed above:
+
+```bash
+$ gen-jakarta -DopenLibertyVersion=19.0.0.6
+```
