@@ -81,5 +81,5 @@ $ gen-jakarta
 You can also pass additional parameters like the ones listed above:
 
 ```bash
-$ gen-jakarta -DopenLibertyVersion=19.0.0.6
+$ gen-jakarta -DopenLibertyVersion=20.0.0.3
 ```
