@@ -9,5 +9,6 @@
 
     <modules>
         <module>jakartaee</module>
+        <module>microprofile</module>
     </modules>
 </project>

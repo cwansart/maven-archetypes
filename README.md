@@ -59,6 +59,45 @@ $ mvn clean verify
 $ mvn liberty:run
 ```
 
+### MicroProfile
+
+The MicroProfile archetype contains a sample project with a JAX-RS-based
+resource. It creates a sample unit test and an integration test. To run the 
+server it uses the `liberty-maven-plugin` though it works on any MicroProfile
+compatible enterprise server.
+
+There are several property that may be set via `-D<property>=<value>`:
+
+| Property              | Description                  | Default value             |
+| --------------------- | -----------------------------| -------------------------:|
+| package               | the package name             | \${groupId}.${artifactId} |
+| openLibertyVersion    | Open Liberty runtime version |                  20.0.0.3 |
+| microProfileVersion   | MicroProfile version         |                       3.2 |
+| slf4jVersion          | Slf4j version                |                    1.7.30 |
+| junitVersion          | JUnit 4 version              |                      4.13 |
+| testcontainersVersion | Testcontainers version       |                    1.13.0 |
+| restAssuredVersion    | Rest Assured version         |                     4.3.0 |
+| surefirePluginVersion | Surefire plugin version      |                  3.0.0-M4 |
+| failsafePluginVersion | Failsafe plugin version      |                  3.0.0-M4 |
+
+Currently MicroProfile 3.3 is not yet supported since Open Liberty does not yet
+provide the MicroProfile-3.3 feature.
+
+To create a project based on the archetype:
+
+```bash
+$ mvn archetype:generate -DarchetypeCatalog=local \
+                         -DarchetypeGroupId=de.cwansart.archetypes \
+                         -DarchetypeArtifactId=jakartaee
+```
+
+After creating you can run tests and run the application via Maven:
+
+```bash
+$ mvn clean verify
+$ mvn liberty:run
+```
+
 ## Shotcut for creation (bash/sh)
 
 Instead of using the long and hard to remember generate command you can add a
@@ -69,6 +108,12 @@ gen-jakarta () {
   mvn archetype:generate -DarchetypeCatalog=local \
                          -DarchetypeGroupId=de.cwansart.archetypes \
                          -DarchetypeArtifactId=jakartaee $@
+}
+
+gen-microprofile () {
+  mvn archetype:generate -DarchetypeCatalog=local \
+                         -DarchetypeGroupId=de.cwansart.archetypes \
+                         -DarchetypeArtifactId=microprofile $@
 }
 ```
 
