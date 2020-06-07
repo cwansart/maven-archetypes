@@ -7,10 +7,10 @@
             <defaultValue>${groupId}.${artifactId.replaceAll("-", "_")}</defaultValue>
         </requiredProperty>
         <requiredProperty key="openLibertyVersion">
-            <defaultValue>20.0.0.3</defaultValue>
+            <defaultValue>20.0.0.6</defaultValue>
         </requiredProperty>
         <requiredProperty key="microProfileVersion">
-            <defaultValue>3.2</defaultValue>
+            <defaultValue>3.3</defaultValue>
         </requiredProperty>
         <requiredProperty key="slf4jVersion">
             <defaultValue>1.7.30</defaultValue>
@@ -19,7 +19,7 @@
             <defaultValue>4.13</defaultValue>
         </requiredProperty>
         <requiredProperty key="testcontainersVersion">
-            <defaultValue>1.13.0</defaultValue>
+            <defaultValue>1.14.3</defaultValue>
         </requiredProperty>
         <requiredProperty key="restAssuredVersion">
             <defaultValue>4.3.0</defaultValue>
